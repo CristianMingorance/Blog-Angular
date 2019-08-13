@@ -1,0 +1,29 @@
+
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center" style=" border-radius: 20px" ><span>Blog Developers</span></h1>
+
+        <!--Profile Card 3-->
+        <div *ngFor="let post of _data.posts" class="col-md-4" style="    margin-bottom: 50px;">
+          <div class="card profile-card-3">
+            <div class="background-block">
+              <img
+                src="https://i.imgur.com/CqrCqZX.png"
+                alt="profile-sample1" class="background" >
+            </div>
+            <div class="profile-thumb-block">
+              <img src="http://galeon.hispavista.com/raulfutbol/img/CARA%20MONO%20actualidad.jpg" alt="profile-image" class="profile" />
+            </div>
+            <div class="card-content" >
+              <h2 [routerLink]="['/products/author',post.autor]">{{post.autor}}<small>Developer</small></h2>
+                <h5 [routerLink]="['/products',post.id]">{{post.titulo}}</h5>
+                <p class="mt-3 w-100 float-left text-center"><strong>{{post.fecha}}</strong></p>
+                <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i
+                      class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+
